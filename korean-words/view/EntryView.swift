@@ -1,55 +1,56 @@
 import SwiftUI
 import SQLite
 import AVFoundation
+import Combine
 
 struct EntryView: SwiftUI.View {
-    @EnvironmentObject var store: ApplicationStore<ApplicationState, ApplicationAction>
-    let targetCode: Int
-
-    init(targetCode: Int) {
-        self.targetCode = targetCode
-    }
-
-    func getEntry() -> Entry? {
-        if let db = self.store.state.db {
-            let entries = Table("entry")
-            let target_code = Expression<Int>("target_code")
-            let query = entries.select(entries[*])
-                .where(target_code == self.targetCode)
-
-            do {
-                if let row = try db.pluck(query) {
-                    return Entry(row: row)
-                }
-            } catch {
-               return nil
-            }
-        }
-
-        return nil
-    }
+    @EnvironmentObject var userInterface: UserInterface
+    @EnvironmentObject var db: DatabaseConnection
 
     func onWordClick() {
-        guard let entry = self.getEntry() else {
-            return
+        if let targetCode = self.userInterface.targetCode,
+           let db = self.db.db,
+           let entry = getEntry(db: db, targetCode: targetCode) {
+            let utterance = AVSpeechUtterance(string: entry.word)
+            let synthesizer = AVSpeechSynthesizer()
+            utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+            synthesizer.speak(utterance)
         }
+    }
 
-        let utterance = AVSpeechUtterance(string: entry.word)
-        let synthesizer = AVSpeechSynthesizer()
-        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
-        synthesizer.speak(utterance)
+    func onAppear() {
+        self.userInterface.$targetCode.sink { debugPrint($0) }
     }
 
     var body: some SwiftUI.View {
         return (
             VStack {
-                VStack {
-                    if let entry = self.getEntry() {
+                VStack(spacing: 40) {
+                    if let db = self.db.db,
+                       let targetCode = self.userInterface.targetCode,
+                       let entry = getEntry(db: db, targetCode: targetCode) {
                         Button(entry.word, action: self.onWordClick)
+                            .font(.title)
+                        if let code = Locale.current.languageCode {
+                            if let sense = getSense(db: db, target_code: targetCode, sense_index: 0),
+                               let word = sense.getWord(code: code) {
+                                Text(word).font(.title)
+                            } else {
+                                Text("").font(.title)
+                            }
+                            if let sense = getSense(db: db, target_code: targetCode, sense_index: 1),
+                               let word = sense.getWord(code: code) {
+                                Text(word).font(.title)
+                            } else {
+                                Text("").font(.title)
+                            }
+                        }
                     } else {
-                        Text("Unable to find entry \(self.targetCode)")
+                        Text("Unable to find entry target code of nil")
                     }
-                }.frame(maxHeight: .infinity)
+                }
+                .frame(maxHeight: .infinity)
+                .onAppear(perform: self.onAppear)
                 BottomControls()
             }.padding()
         )

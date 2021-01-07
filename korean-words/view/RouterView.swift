@@ -1,13 +1,15 @@
 import SwiftUI
+import Combine
 
 struct Router: View {
-    @EnvironmentObject var store: ApplicationStore<ApplicationState, ApplicationAction>
-    
+    @EnvironmentObject var userInterface: UserInterface
+    @EnvironmentObject var connection: DatabaseConnection
+
     var body: some View {
-        if let targetCode = self.store.state.targetCode {
-            EntryView(targetCode: targetCode)
+        if let db = self.connection.db, self.userInterface.targetCode != nil {
+            EntryView()
         } else {
-           HomeView()
+            HomeView()
         }
     }
 }

@@ -7,33 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00E6E6225A62D1600806DE7 /* entries-with-word-grades.db in Resources */ = {isa = PBXBuildFile; fileRef = A00E6E6125A62D1600806DE7 /* entries-with-word-grades.db */; };
+		A00E6E6625A62DD700806DE7 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00E6E6525A62DD700806DE7 /* database.swift */; };
+		A040C65125A54B7900EAA98A /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040C65025A54B7900EAA98A /* DatabaseConnection.swift */; };
+		A040C65425A54DCE00EAA98A /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040C65325A54DCE00EAA98A /* UserInterface.swift */; };
 		A04564BB259FA0F10043CC2C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564BA259FA0F10043CC2C /* Application.swift */; };
 		A04564BD259FA0F10043CC2C /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564BC259FA0F10043CC2C /* RouterView.swift */; };
 		A04564BF259FA0F20043CC2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04564BE259FA0F20043CC2C /* Assets.xcassets */; };
 		A04564C2259FA0F20043CC2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04564C1259FA0F20043CC2C /* Preview Assets.xcassets */; };
 		A04564CC25A144B20043CC2C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = A04564CB25A144B20043CC2C /* SQLite */; };
-		A04564CF25A144F00043CC2C /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = A04564CE25A144F00043CC2C /* database.db */; };
 		A04564D325A14EC00043CC2C /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564D225A14EC00043CC2C /* EntryView.swift */; };
-		A04564D825A151F20043CC2C /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564D725A151F20043CC2C /* Reducer.swift */; };
-		A04564DC25A152D40043CC2C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564DB25A152D40043CC2C /* Store.swift */; };
 		A04564E325A157A50043CC2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E225A157A50043CC2C /* HomeView.swift */; };
-		A04564E625A159A80043CC2C /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E525A159A80043CC2C /* Entry.swift */; };
+		A04564E625A159A80043CC2C /* dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E525A159A80043CC2C /* dictionary.swift */; };
 		A04564E925A15C0F0043CC2C /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E825A15C0F0043CC2C /* BottomControls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A00E6E6125A62D1600806DE7 /* entries-with-word-grades.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "entries-with-word-grades.db"; sourceTree = "<group>"; };
+		A00E6E6525A62DD700806DE7 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
+		A040C65025A54B7900EAA98A /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
+		A040C65325A54DCE00EAA98A /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		A04564B7259FA0F10043CC2C /* korean-words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "korean-words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04564BA259FA0F10043CC2C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		A04564BC259FA0F10043CC2C /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		A04564BE259FA0F20043CC2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04564C1259FA0F20043CC2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A04564C3259FA0F20043CC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A04564CE25A144F00043CC2C /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = ../../../Downloads/database.db; sourceTree = "<group>"; };
 		A04564D225A14EC00043CC2C /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
-		A04564D725A151F20043CC2C /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		A04564DB25A152D40043CC2C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		A04564E225A157A50043CC2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		A04564E525A159A80043CC2C /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		A04564E525A159A80043CC2C /* dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionary.swift; sourceTree = "<group>"; };
 		A04564E825A15C0F0043CC2C /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A00E6E5B25A6206700806DE7 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				A00E6E6525A62DD700806DE7 /* database.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		A04564AE259FA0F10043CC2C = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +78,12 @@
 		A04564B9259FA0F10043CC2C /* korean-words */ = {
 			isa = PBXGroup;
 			children = (
-				A04564D625A151D90043CC2C /* store */,
+				A00E6E5B25A6206700806DE7 /* helper */,
+				A04564D625A151D90043CC2C /* definition */,
 				A04564D125A14E9A0043CC2C /* view */,
-				A04564CE25A144F00043CC2C /* database.db */,
 				A04564BA259FA0F10043CC2C /* Application.swift */,
 				A04564BE259FA0F20043CC2C /* Assets.xcassets */,
+				A00E6E6125A62D1600806DE7 /* entries-with-word-grades.db */,
 				A04564C3259FA0F20043CC2C /* Info.plist */,
 				A04564C0259FA0F20043CC2C /* Preview Content */,
 			);
@@ -98,14 +109,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		A04564D625A151D90043CC2C /* store */ = {
+		A04564D625A151D90043CC2C /* definition */ = {
 			isa = PBXGroup;
 			children = (
-				A04564D725A151F20043CC2C /* Reducer.swift */,
-				A04564DB25A152D40043CC2C /* Store.swift */,
-				A04564E525A159A80043CC2C /* Entry.swift */,
+				A04564E525A159A80043CC2C /* dictionary.swift */,
+				A040C65025A54B7900EAA98A /* DatabaseConnection.swift */,
+				A040C65325A54DCE00EAA98A /* UserInterface.swift */,
 			);
-			path = store;
+			path = definition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +184,7 @@
 			files = (
 				A04564C2259FA0F20043CC2C /* Preview Assets.xcassets in Resources */,
 				A04564BF259FA0F20043CC2C /* Assets.xcassets in Resources */,
-				A04564CF25A144F00043CC2C /* database.db in Resources */,
+				A00E6E6225A62D1600806DE7 /* entries-with-word-grades.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,12 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A04564E925A15C0F0043CC2C /* BottomControls.swift in Sources */,
-				A04564E625A159A80043CC2C /* Entry.swift in Sources */,
-				A04564DC25A152D40043CC2C /* Store.swift in Sources */,
-				A04564D825A151F20043CC2C /* Reducer.swift in Sources */,
+				A040C65125A54B7900EAA98A /* DatabaseConnection.swift in Sources */,
+				A04564E625A159A80043CC2C /* dictionary.swift in Sources */,
 				A04564BD259FA0F10043CC2C /* RouterView.swift in Sources */,
 				A04564E325A157A50043CC2C /* HomeView.swift in Sources */,
 				A04564BB259FA0F10043CC2C /* Application.swift in Sources */,
+				A040C65425A54DCE00EAA98A /* UserInterface.swift in Sources */,
+				A00E6E6625A62DD700806DE7 /* database.swift in Sources */,
 				A04564D325A14EC00043CC2C /* EntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
