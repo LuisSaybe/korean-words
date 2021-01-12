@@ -1,5 +1,53 @@
 import SQLite
 
+func getTargetCodes(db: Connection, ui: UserInterface) -> [Int]? {
+    let entries = Table("entry")
+    let target_code = Expression<Int>("target_code")
+    let word_grade = Expression<String>("word_grade")
+    let word_grade_clause = (word_grade == WordGrade.advanced.rawValue && ui.showAdvancedWords) ||
+        (word_grade == WordGrade.intermediate.rawValue && ui.showIntermediateWords) ||
+        (word_grade == WordGrade.beginner.rawValue && ui.showBeginnerWords)
+    let query = entries.select(target_code)
+        .where(word_grade_clause)
+        .order(target_code.asc)
+
+    let sequence: AnySequence<Row>
+    
+    do  {
+        sequence = try db.prepare(query)
+    } catch {
+        return nil
+    }
+
+    return sequence.map { $0[target_code] }
+}
+
+func getFullEntry(db: Connection, targetCode: Int) -> FullEntry? {
+    if let entry = getEntry(db: db, targetCode: targetCode) {
+        let senses = getSenses(db: db, targetCode: targetCode) ?? []
+        
+        return FullEntry(
+            entry: entry,
+            senses: senses
+        )
+    }
+    
+    return nil
+}
+
+func getSenses(db: Connection, targetCode: Int) -> [SenseInfo]? {
+    let table = Table("sense_info")
+    let query = table.select(table[*])
+        .where(targetCode == Expression<Int>("target_code"))
+
+    do {
+        let rows = try db.prepare(query)
+        return rows.map { SenseInfo(row: $0) }
+    } catch {
+       return nil
+    }
+}
+
 func getEntry(db: Connection, targetCode: Int) -> Entry? {
     let entries = Table("entry")
     let target_code = Expression<Int>("target_code")

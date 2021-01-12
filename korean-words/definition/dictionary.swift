@@ -7,17 +7,9 @@ enum WordGrade: String {
   case advanced = "고급"
 }
 
-enum LanguageNames: String {
-  case english = "영어"
-  case japanese = "일본어"
-  case french = "프랑스어"
-  case spanish = "스페인어"
-  case arabic = "아랍어"
-  case mongolian = "몽골어"
-  case vietnamese = "베트남어"
-  case thai = "타이어"
-  case indonesian = "인도네시아어"
-  case russian = "러시아어"
+struct FullEntry {
+    let entry: Entry
+    let senses: [SenseInfo]
 }
 
 struct Entry {
@@ -58,30 +50,30 @@ struct SenseInfo {
     let russian: String?
     let russian_dfn: String?
 
-    init(row: Row) {
+    init(row: Row) {        
         self.target_code = row[Expression<Int>("target_code")]
         self.sense_index = row[Expression<Int>("sense_index")]
         self.definition = row[Expression<String>("definition")]
-        self.english = row[Expression<String>("english")]
-        self.english_dfn = row[Expression<String>("english_dfn")]
-        self.japanese = row[Expression<String>("japanese")]
-        self.japanese_dfn = row[Expression<String>("japanese_dfn")]
-        self.french = row[Expression<String>("french")]
-        self.french_dfn = row[Expression<String>("french_dfn")]
-        self.spanish = row[Expression<String>("spanish")]
-        self.spanish_dfn = row[Expression<String>("spanish_dfn")]
-        self.arabic = row[Expression<String>("arabic")]
-        self.arabic_dfn = row[Expression<String>("arabic_dfn")]
-        self.mongolian = row[Expression<String>("mongolian")]
-        self.mongolian_dfn = row[Expression<String>("mongolian_dfn")]
-        self.thai = row[Expression<String>("thai")]
-        self.thai_dfn = row[Expression<String>("thai_dfn")]
-        self.indonesian = row[Expression<String>("indonesian")]
-        self.indonesian_dfn = row[Expression<String>("indonesian_dfn")]
-        self.russian = row[Expression<String>("russian")]
-        self.russian_dfn = row[Expression<String>("russian_dfn")]
-        self.vietnamese = row[Expression<String>("vietnamese")]
-        self.vietnamese_dfn = row[Expression<String>("vietnamese_dfn")]
+        self.english = row[Expression<String?>("english")]
+        self.english_dfn = row[Expression<String?>("english_dfn")]
+        self.japanese = row[Expression<String?>("japanese")]
+        self.japanese_dfn = row[Expression<String?>("japanese_dfn")]
+        self.french = row[Expression<String?>("french")]
+        self.french_dfn = row[Expression<String?>("french_dfn")]
+        self.spanish = row[Expression<String?>("spanish")]
+        self.spanish_dfn = row[Expression<String?>("spanish_dfn")]
+        self.arabic = row[Expression<String?>("arabic")]
+        self.arabic_dfn = row[Expression<String?>("arabic_dfn")]
+        self.mongolian = row[Expression<String?>("mongolian")]
+        self.mongolian_dfn = row[Expression<String?>("mongolian_dfn")]
+        self.thai = row[Expression<String?>("thai")]
+        self.thai_dfn = row[Expression<String?>("thai_dfn")]
+        self.indonesian = row[Expression<String?>("indonesian")]
+        self.indonesian_dfn = row[Expression<String?>("indonesian_dfn")]
+        self.russian = row[Expression<String?>("russian")]
+        self.russian_dfn = row[Expression<String?>("russian_dfn")]
+        self.vietnamese = row[Expression<String?>("vietnamese")]
+        self.vietnamese_dfn = row[Expression<String?>("vietnamese_dfn")]
     }
 
     func getWord(code: String) -> String? {
@@ -120,7 +112,7 @@ struct SenseInfo {
         if code == "id" {
             return self.indonesian
         }
-        
+
         if code == "ru" {
             return self.russian
         }

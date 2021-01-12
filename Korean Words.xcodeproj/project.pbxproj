@@ -9,24 +9,28 @@
 /* Begin PBXBuildFile section */
 		A00E6E6225A62D1600806DE7 /* entries-with-word-grades.db in Resources */ = {isa = PBXBuildFile; fileRef = A00E6E6125A62D1600806DE7 /* entries-with-word-grades.db */; };
 		A00E6E6625A62DD700806DE7 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00E6E6525A62DD700806DE7 /* database.swift */; };
+		A02FB30425ACC119008D6164 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FB30325ACC119008D6164 /* ProgressBar.swift */; };
 		A040C65125A54B7900EAA98A /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040C65025A54B7900EAA98A /* DatabaseConnection.swift */; };
 		A040C65425A54DCE00EAA98A /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A040C65325A54DCE00EAA98A /* UserInterface.swift */; };
+		A042797125AA55B1004C2CE3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A042797025AA55B1004C2CE3 /* SettingsView.swift */; };
 		A04564BB259FA0F10043CC2C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564BA259FA0F10043CC2C /* Application.swift */; };
 		A04564BD259FA0F10043CC2C /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564BC259FA0F10043CC2C /* RouterView.swift */; };
 		A04564BF259FA0F20043CC2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04564BE259FA0F20043CC2C /* Assets.xcassets */; };
 		A04564C2259FA0F20043CC2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04564C1259FA0F20043CC2C /* Preview Assets.xcassets */; };
 		A04564CC25A144B20043CC2C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = A04564CB25A144B20043CC2C /* SQLite */; };
 		A04564D325A14EC00043CC2C /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564D225A14EC00043CC2C /* EntryView.swift */; };
-		A04564E325A157A50043CC2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E225A157A50043CC2C /* HomeView.swift */; };
 		A04564E625A159A80043CC2C /* dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E525A159A80043CC2C /* dictionary.swift */; };
-		A04564E925A15C0F0043CC2C /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04564E825A15C0F0043CC2C /* BottomControls.swift */; };
+		A0A7E5D525AD0A67007AD518 /* PlayControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7E5D425AD0A67007AD518 /* PlayControls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A00E6E6125A62D1600806DE7 /* entries-with-word-grades.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = "entries-with-word-grades.db"; sourceTree = "<group>"; };
 		A00E6E6525A62DD700806DE7 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
+		A02FB30325ACC119008D6164 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		A040C65025A54B7900EAA98A /* DatabaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
 		A040C65325A54DCE00EAA98A /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		A042796E25AA4C8B004C2CE3 /* korean-words.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "korean-words.entitlements"; sourceTree = "<group>"; };
+		A042797025AA55B1004C2CE3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A04564B7259FA0F10043CC2C /* korean-words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "korean-words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04564BA259FA0F10043CC2C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		A04564BC259FA0F10043CC2C /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
@@ -34,9 +38,8 @@
 		A04564C1259FA0F20043CC2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A04564C3259FA0F20043CC2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04564D225A14EC00043CC2C /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
-		A04564E225A157A50043CC2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A04564E525A159A80043CC2C /* dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionary.swift; sourceTree = "<group>"; };
-		A04564E825A15C0F0043CC2C /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
+		A0A7E5D425AD0A67007AD518 /* PlayControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayControls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		A04564B9259FA0F10043CC2C /* korean-words */ = {
 			isa = PBXGroup;
 			children = (
+				A042796E25AA4C8B004C2CE3 /* korean-words.entitlements */,
 				A00E6E5B25A6206700806DE7 /* helper */,
 				A04564D625A151D90043CC2C /* definition */,
 				A04564D125A14E9A0043CC2C /* view */,
@@ -103,8 +107,9 @@
 			children = (
 				A04564BC259FA0F10043CC2C /* RouterView.swift */,
 				A04564D225A14EC00043CC2C /* EntryView.swift */,
-				A04564E225A157A50043CC2C /* HomeView.swift */,
-				A04564E825A15C0F0043CC2C /* BottomControls.swift */,
+				A042797025AA55B1004C2CE3 /* SettingsView.swift */,
+				A02FB30325ACC119008D6164 /* ProgressBar.swift */,
+				A0A7E5D425AD0A67007AD518 /* PlayControls.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -156,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A04564B2259FA0F10043CC2C /* Build configuration list for PBXProject "korean-words" */;
+			buildConfigurationList = A04564B2259FA0F10043CC2C /* Build configuration list for PBXProject "Korean Words" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -195,13 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04564E925A15C0F0043CC2C /* BottomControls.swift in Sources */,
+				A02FB30425ACC119008D6164 /* ProgressBar.swift in Sources */,
 				A040C65125A54B7900EAA98A /* DatabaseConnection.swift in Sources */,
 				A04564E625A159A80043CC2C /* dictionary.swift in Sources */,
 				A04564BD259FA0F10043CC2C /* RouterView.swift in Sources */,
-				A04564E325A157A50043CC2C /* HomeView.swift in Sources */,
+				A042797125AA55B1004C2CE3 /* SettingsView.swift in Sources */,
 				A04564BB259FA0F10043CC2C /* Application.swift in Sources */,
 				A040C65425A54DCE00EAA98A /* UserInterface.swift in Sources */,
+				A0A7E5D525AD0A67007AD518 /* PlayControls.swift in Sources */,
 				A00E6E6625A62DD700806DE7 /* database.swift in Sources */,
 				A04564D325A14EC00043CC2C /* EntryView.swift in Sources */,
 			);
@@ -331,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "korean-words/korean-words.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"korean-words/Preview Content\"";
 				DEVELOPMENT_TEAM = DRQ8M77NK8;
@@ -343,6 +350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luissaybe.korean-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "korean-words/korean-words.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"korean-words/Preview Content\"";
 				DEVELOPMENT_TEAM = DRQ8M77NK8;
@@ -365,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.luissaybe.korean-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A04564B2259FA0F10043CC2C /* Build configuration list for PBXProject "korean-words" */ = {
+		A04564B2259FA0F10043CC2C /* Build configuration list for PBXProject "Korean Words" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A04564C4259FA0F20043CC2C /* Debug */,
